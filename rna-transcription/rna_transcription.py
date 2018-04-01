@@ -1,14 +1,22 @@
+import string
+
 def to_rna(dna_strand):
-	dna_strand = dna_strand.upper()
-	for x in dna_strand:
-		if x == "G":
-			x = "C"
-		if x == "C":
-			x = "G"
-		if x == "T":
-			x = "A"
-		if x == "A":
-			x = "U"
-	return dna_strand
 	
-print (to_rna("GCTA"))
+	dna = "GCTA"		
+	rna = ""
+	
+	for x in dna_strand:
+		if x not in dna:
+			raise Exception("\nWrong input entered \nEnter RNA - G,C,T,A")
+		if x == "G":
+			rna += "C"
+		if x == "C":
+			rna += "G"
+		if x == "T":
+			rna += "A"
+		if x == "A":
+			rna += "U"
+	return rna
+
+print (to_rna("SDSDSA"))
+	
