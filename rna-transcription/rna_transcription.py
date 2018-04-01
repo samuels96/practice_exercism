@@ -17,6 +17,3 @@ def to_rna(dna_strand):
 		if x == "A":
 			rna += "U"
 	return rna
-
-print (to_rna("SDSDSA"))
-	
